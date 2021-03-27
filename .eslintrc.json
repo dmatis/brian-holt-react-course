@@ -1,19 +1,16 @@
 {
   "extends": [
-    "eslint:recommended",
-    "plugin:import/errors",
-    "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended",
-    "prettier",
-    "prettier/react"
+    "plugin:@typescript-eslint/recommended"
   ],
   "rules": {
     "react/prop-types": 0,
-    "react-hooks/rules-of-hooks": "error",
-    "no-console": "warn"
+    "object-literal-sort-keys": 0,
+    "@typescript-eslint/no-empty-function": 0,
+    "no-console": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0
   },
-  "parser": "babel-eslint",
-  "plugins": ["react", "import", "jsx-a11y", "react-hooks"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module",
