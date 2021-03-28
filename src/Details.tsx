@@ -20,7 +20,7 @@ class Details extends React.Component<RouteComponentProps<{ id: string }>> {
   };
   componentDidMount() {
     if (!this.props.id) {
-      navigate('/');
+      navigate("/");
       return;
     }
 
@@ -31,9 +31,7 @@ class Details extends React.Component<RouteComponentProps<{ id: string }>> {
           url: animal.url,
           name: animal.name,
           animal: animal.type,
-          location: `${animal.contact.address.city}, ${
-            animal.contact.address.state
-          }`,
+          location: `${animal.contact.address.city}, ${animal.contact.address.state}`,
           description: animal.description,
           media: animal.photos,
           breed: animal.breeds.primary,
@@ -91,7 +89,9 @@ class Details extends React.Component<RouteComponentProps<{ id: string }>> {
   }
 }
 
-export default function DetailsErrorBoundary(props: RouteComponentProps<{ id: string }>): JSX.Element {
+export default function DetailsErrorBoundary(
+  props: RouteComponentProps<{ id: string }>
+): JSX.Element {
   return (
     <ErrorBoundary>
       <Details {...props} />
